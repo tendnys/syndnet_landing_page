@@ -1,5 +1,6 @@
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { UseCases } from './components/UseCases';
 import { AISearchShowcase } from './components/AISearchShowcase';
 import { GISMapping } from './components/GISMapping';
 import { EnvironmentalAnalysis } from './components/EnvironmentalAnalysis';
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <UseCases />
         <AISearchShowcase />
         <GISMapping />
         <EnvironmentalAnalysis />
