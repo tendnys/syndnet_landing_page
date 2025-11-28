@@ -58,13 +58,13 @@ export function UseCases() {
   return (
     <section id="use-cases" className="bg-[#0A0F1E]">
       {/* Header Section */}
-      <div className="py-24 sm:py-32">
+      <div className="pt-32 pb-16 sm:pt-40 sm:pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              Use Cases
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+              Uncovers Opportunities Behind Every Parcel
             </h2>
-            <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl sm:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               How teams use ScoutGPT for parcel intelligence, deal flow, and spatial decision making.
             </p>
           </div>
@@ -96,48 +96,48 @@ export function UseCases() {
       </div>
 
       {/* Mobile: Simple Stacked Layout */}
-      <div className="lg:hidden pb-24 space-y-20">
+      <div className="lg:hidden pb-24 space-y-24">
         {useCases.map((useCase, index) => (
           <div key={index} className="px-6">
-            {/* Screenshot on top */}
-            <div className="mb-8">
-              <div className="aspect-[4/3] w-full max-w-md mx-auto">
-                <div className="w-full h-full">
-                  {/* Import and use UseCaseScreenshotCard directly for mobile */}
-                  <div className="relative w-full h-full">
-                    <div
-                      className="relative w-full h-full rounded-xl bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800/50 shadow-2xl overflow-hidden"
-                      style={{
-                        transform: 'perspective(1200px) rotateY(-2deg) rotateX(1deg)',
-                        transformStyle: 'preserve-3d',
-                      }}
-                    >
-                      <div className="absolute inset-4 bg-gradient-to-br from-gray-800/40 to-gray-900/60 rounded-lg border border-gray-700/30 overflow-hidden">
-                        <div
-                          className="absolute inset-0 opacity-5"
-                          style={{
-                            backgroundImage: 'linear-gradient(#1877F2 1px, transparent 1px), linear-gradient(90deg, #1877F2 1px, transparent 1px)',
-                            backgroundSize: '40px 40px'
-                          }}
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-gray-950/60 via-transparent to-gray-900/40" />
-                      </div>
+            {/* Screenshot on top - larger for mobile */}
+            <div className="mb-10">
+              <div className="aspect-[16/11] w-full max-w-lg mx-auto">
+                <div className="relative w-full h-full">
+                  <div
+                    className="relative w-full h-full rounded-xl bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800/60 overflow-hidden"
+                    style={{
+                      transform: 'perspective(1200px) rotateY(-2deg) rotateX(2deg)',
+                      transformStyle: 'preserve-3d',
+                      boxShadow: '0 20px 40px -12px rgba(0, 0, 0, 0.4), 0 0 40px -10px rgba(24, 119, 242, 0.08)',
+                    }}
+                  >
+                    <div className="absolute inset-5 bg-gradient-to-br from-gray-800/50 to-gray-900/70 rounded-lg border border-gray-700/40 overflow-hidden">
+                      <div
+                        className="absolute inset-0 opacity-8"
+                        style={{
+                          backgroundImage: 'linear-gradient(#1877F2 1px, transparent 1px), linear-gradient(90deg, #1877F2 1px, transparent 1px)',
+                          backgroundSize: '40px 40px'
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-gray-900/50" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#1877F2]/5 via-transparent to-purple-500/5" />
                     </div>
+                    <div className="absolute -inset-1 bg-gradient-to-br from-[#1877F2]/8 via-transparent to-purple-500/8 rounded-xl blur-lg" />
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Text below */}
-            <div className="text-center space-y-4">
-              <h3 className="text-2xl sm:text-3xl font-bold text-white">
+            <div className="text-center space-y-5">
+              <h3 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
                 {useCase.headline}
               </h3>
-              <div className="space-y-2">
-                <p className="text-base sm:text-lg text-gray-300">
+              <div className="space-y-3">
+                <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
                   {useCase.description[0]}
                 </p>
-                <p className="text-base sm:text-lg text-gray-300">
+                <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
                   {useCase.description[1]}
                 </p>
               </div>

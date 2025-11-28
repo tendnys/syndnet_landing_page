@@ -64,34 +64,38 @@ export function UseCaseScreenshotCard({ variant = 1 }: UseCaseScreenshotCardProp
 
   return (
     <div className="relative w-full h-full">
-      {/* Outer card with perspective and tilt */}
+      {/* Outer card with perspective and tilt - more pronounced for hero */}
       <div
-        className="relative w-full h-full rounded-xl bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800/50 shadow-2xl overflow-hidden"
+        className="relative w-full h-full rounded-2xl bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800/60 overflow-hidden"
         style={{
-          transform: 'perspective(1200px) rotateY(-3deg) rotateX(2deg)',
+          transform: 'perspective(1500px) rotateY(-4deg) rotateX(3deg)',
           transformStyle: 'preserve-3d',
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 60px -15px rgba(24, 119, 242, 0.1)',
         }}
       >
         {/* Inner UI frame - lighter background suggesting app content */}
-        <div className="absolute inset-4 bg-gradient-to-br from-gray-800/40 to-gray-900/60 rounded-lg border border-gray-700/30 overflow-hidden">
+        <div className="absolute inset-6 bg-gradient-to-br from-gray-800/50 to-gray-900/70 rounded-xl border border-gray-700/40 overflow-hidden">
           {/* Accent elements and markers */}
           {getAccentElements()}
 
           {/* Subtle grid pattern */}
           <div
-            className="absolute inset-0 opacity-5"
+            className="absolute inset-0 opacity-8"
             style={{
               backgroundImage: 'linear-gradient(#1877F2 1px, transparent 1px), linear-gradient(90deg, #1877F2 1px, transparent 1px)',
-              backgroundSize: '40px 40px'
+              backgroundSize: '50px 50px'
             }}
           />
 
           {/* Gradient overlay for depth */}
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-950/60 via-transparent to-gray-900/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-gray-900/50" />
+
+          {/* Additional glow from edges */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1877F2]/5 via-transparent to-purple-500/5" />
         </div>
 
-        {/* Subtle glow effect */}
-        <div className="absolute -inset-px bg-gradient-to-br from-[#1877F2]/5 via-transparent to-[#1877F2]/5 rounded-xl blur-sm" />
+        {/* Enhanced glow effect */}
+        <div className="absolute -inset-1 bg-gradient-to-br from-[#1877F2]/10 via-transparent to-purple-500/10 rounded-2xl blur-xl" />
       </div>
     </div>
   );
