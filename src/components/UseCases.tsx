@@ -1,5 +1,4 @@
 import { UseCaseBand } from './UseCaseBand';
-import { useScrollProgress } from '../hooks/useScrollProgress';
 
 const useCases = [
   {
@@ -53,8 +52,6 @@ const useCases = [
 ];
 
 export function UseCases() {
-  const { activeIndex, containerRef } = useScrollProgress({ totalSteps: useCases.length });
-
   return (
     <section id="use-cases" className="bg-[#0A0F1E]">
       {/* Header Section */}
@@ -71,28 +68,17 @@ export function UseCases() {
         </div>
       </div>
 
-      {/* Desktop: Pinned Storytelling Section */}
-      <div className="hidden lg:block">
-        <div
-          ref={containerRef}
-          className="relative"
-          style={{
-            height: `${useCases.length * 100}vh`,
-          }}
-        >
-          <div className="sticky top-0 h-screen flex items-center overflow-hidden">
-            {useCases.map((useCase, index) => (
-              <UseCaseBand
-                key={index}
-                headline={useCase.headline}
-                description={useCase.description}
-                variant={useCase.variant}
-                isActive={activeIndex === index}
-                index={index}
-              />
-            ))}
-          </div>
-        </div>
+      {/* Stacked Hero Bands - Desktop & Tablet */}
+      <div className="hidden lg:block pb-32">
+        {useCases.map((useCase, index) => (
+          <UseCaseBand
+            key={index}
+            headline={useCase.headline}
+            description={useCase.description}
+            variant={useCase.variant}
+            index={index}
+          />
+        ))}
       </div>
 
       {/* Mobile: Simple Stacked Layout */}
