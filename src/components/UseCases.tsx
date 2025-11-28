@@ -1,4 +1,5 @@
 import { UseCaseBand } from './UseCaseBand';
+import { UseCaseScreenshotCard } from './UseCaseScreenshotCard';
 
 const useCases = [
   {
@@ -89,44 +90,22 @@ export function UseCases() {
       </div>
 
       {/* Mobile: Simple Stacked Layout */}
-      <div className="lg:hidden pb-24 space-y-24">
+      <div className="lg:hidden pb-24 space-y-20">
         {useCases.map((useCase, index) => (
           <div key={index} className="px-6">
-            {/* Screenshot on top - larger for mobile */}
-            <div className="mb-10">
-              <div className="aspect-[16/11] w-full max-w-lg mx-auto">
-                <div className="relative w-full h-full">
-                  <div
-                    className="relative w-full h-full rounded-xl bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800/60 overflow-hidden"
-                    style={{
-                      transform: 'perspective(1200px) rotateY(-2deg) rotateX(2deg)',
-                      transformStyle: 'preserve-3d',
-                      boxShadow: '0 20px 40px -12px rgba(0, 0, 0, 0.4), 0 0 40px -10px rgba(24, 119, 242, 0.08)',
-                    }}
-                  >
-                    <div className="absolute inset-5 bg-gradient-to-br from-gray-800/50 to-gray-900/70 rounded-lg border border-gray-700/40 overflow-hidden">
-                      <div
-                        className="absolute inset-0 opacity-8"
-                        style={{
-                          backgroundImage: 'linear-gradient(#1877F2 1px, transparent 1px), linear-gradient(90deg, #1877F2 1px, transparent 1px)',
-                          backgroundSize: '40px 40px'
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-gray-900/50" />
-                      <div className="absolute inset-0 bg-gradient-to-br from-[#1877F2]/5 via-transparent to-purple-500/5" />
-                    </div>
-                    <div className="absolute -inset-1 bg-gradient-to-br from-[#1877F2]/8 via-transparent to-purple-500/8 rounded-xl blur-lg" />
-                  </div>
-                </div>
+            {/* Screenshot on top - full width and large */}
+            <div className="mb-8">
+              <div className="h-[320px] sm:h-[400px] w-full max-w-2xl mx-auto">
+                <UseCaseScreenshotCard variant={useCase.variant} />
               </div>
             </div>
 
             {/* Text below - center aligned with CTA */}
-            <div className="text-center space-y-5 max-w-md mx-auto">
+            <div className="text-center space-y-4 max-w-lg mx-auto">
               <h3 className="text-2xl sm:text-3xl font-bold text-white leading-tight">
                 {useCase.headline}
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
                   {useCase.description[0]}
                 </p>
@@ -135,9 +114,11 @@ export function UseCases() {
                 </p>
               </div>
               {/* CTA Button - center aligned */}
-              <button className="mt-4 px-6 py-3 bg-[#1877F2] text-white font-semibold rounded-lg hover:bg-[#3489FF] transition-all duration-200 shadow-lg hover:shadow-xl">
-                {useCase.ctaLabel}
-              </button>
+              <div className="pt-2">
+                <button className="px-6 py-3 bg-[#1877F2] text-white font-semibold rounded-lg hover:bg-[#3489FF] transition-all duration-200 shadow-lg hover:shadow-xl">
+                  {useCase.ctaLabel}
+                </button>
+              </div>
             </div>
           </div>
         ))}
