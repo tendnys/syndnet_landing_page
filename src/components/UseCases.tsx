@@ -8,6 +8,7 @@ const useCases = [
       'Surface hidden off market opportunities faster than traditional tools.',
     ] as [string, string],
     variant: 1 as const,
+    ctaLabel: 'Explore Parcel Intelligence',
   },
   {
     headline: 'Automated Deal Pipeline',
@@ -16,6 +17,7 @@ const useCases = [
       'Track, prioritize, and move deals through an automated CRM pipeline without manual entry.',
     ] as [string, string],
     variant: 2 as const,
+    ctaLabel: 'View Deal Pipeline',
   },
   {
     headline: 'Zoning Intelligence',
@@ -24,6 +26,7 @@ const useCases = [
       'Interpret zoning overlays, height limits, setbacks, and environmental rules in one view.',
     ] as [string, string],
     variant: 3 as const,
+    ctaLabel: 'Explore Zoning Intelligence',
   },
   {
     headline: 'Suitability Analysis',
@@ -32,6 +35,7 @@ const useCases = [
       'Evaluate parcels based on infrastructure, demographics, utilities, and environmental fit.',
     ] as [string, string],
     variant: 4 as const,
+    ctaLabel: 'Run Suitability Analysis',
   },
   {
     headline: 'Portfolio Risk Mapping',
@@ -40,6 +44,7 @@ const useCases = [
       'Map concentrations of risk instantly across any portfolio or target region.',
     ] as [string, string],
     variant: 5 as const,
+    ctaLabel: 'Map Portfolio Risk',
   },
   {
     headline: 'Recommendation Engine',
@@ -48,6 +53,7 @@ const useCases = [
       'Highlight areas primed for development, redevelopment, or strategic investment.',
     ] as [string, string],
     variant: 6 as const,
+    ctaLabel: 'Discover Opportunities',
   },
 ];
 
@@ -77,6 +83,7 @@ export function UseCases() {
             description={useCase.description}
             variant={useCase.variant}
             index={index}
+            ctaLabel={useCase.ctaLabel}
           />
         ))}
       </div>
@@ -114,19 +121,23 @@ export function UseCases() {
               </div>
             </div>
 
-            {/* Text below */}
-            <div className="text-center space-y-5">
-              <h3 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
+            {/* Text below - center aligned with CTA */}
+            <div className="text-center space-y-5 max-w-md mx-auto">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white leading-tight">
                 {useCase.headline}
               </h3>
               <div className="space-y-3">
-                <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+                <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
                   {useCase.description[0]}
                 </p>
-                <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+                <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
                   {useCase.description[1]}
                 </p>
               </div>
+              {/* CTA Button - center aligned */}
+              <button className="mt-4 px-6 py-3 bg-[#1877F2] text-white font-semibold rounded-lg hover:bg-[#3489FF] transition-all duration-200 shadow-lg hover:shadow-xl">
+                {useCase.ctaLabel}
+              </button>
             </div>
           </div>
         ))}
