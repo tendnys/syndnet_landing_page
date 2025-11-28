@@ -83,10 +83,62 @@
     position: absolute;
     inset: 0;
     background-image: url("/images/city-activity-map.jpg");
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    opacity: 0.08;
+    z-index: -1;
+  }
+}
+
+@layer components {
+  /* Founder Testimonial Section - White with Blueprint Map */
+  .founder-section {
+    position: relative;
+    isolation: isolate;
+    background-color: #ffffff;
+    color: #020617;
+  }
+
+  .founder-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/images/city-blue-prints-5808798.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.2;
+    opacity: 0.06;
+    mix-blend-mode: multiply;
+    z-index: -1;
+  }
+
+  /* Use Case Section - Urban Tech Background */
+  .usecase-section {
+    position: relative;
+    isolation: isolate;
+    background-color: #020617;
+    overflow: hidden;
+  }
+
+  .usecase-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/images/Urban planning_tech.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.10;
+    z-index: -2;
+  }
+
+  .usecase-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(88, 28, 135, 0.35), transparent 55%);
+    opacity: 0.8;
     z-index: -1;
   }
 }

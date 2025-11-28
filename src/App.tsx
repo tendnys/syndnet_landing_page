@@ -26,8 +26,10 @@ function App() {
         {/* City activity map background for all sections after hero */}
         <section className="bg-city-primary">
           {/* Testimonial Section */}
-          <div className="bg-app-saas-section">
-            <TestimonialQuote />
+          <div className="founder-section">
+            <div className="bg-app-saas-section">
+              <TestimonialQuote />
+            </div>
           </div>
 
           {/* Gradient transition */}
@@ -90,8 +92,10 @@ function App() {
           <div className="section-divider-fade" />
 
           {/* Use Cases */}
-          <div className="bg-app-saas-section">
-            <UseCases />
+          <div className="usecase-section">
+            <div className="bg-app-saas-section">
+              <UseCases />
+            </div>
           </div>
 
           {/* Gradient transition */}
