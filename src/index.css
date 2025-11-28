@@ -41,6 +41,78 @@
   .section-padding {
     @apply py-20 lg:py-32 px-6 lg:px-8;
   }
+
+  /* Animated SaaS Background - Topo Map */
+  .bg-app-saas {
+    position: relative;
+    background-color: #050509;
+    overflow: hidden;
+  }
+
+  .bg-app-saas::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      /* Top radial glow */
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(129, 140, 248, 0.18), transparent 70%),
+      /* Base dark color */
+      #050509;
+    z-index: 1;
+  }
+
+  .bg-app-saas::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/topo-lines.png');
+    background-size: 600px 600px;
+    background-repeat: repeat;
+    opacity: 0.15;
+    z-index: 2;
+    animation: topoDrift 40s ease-in-out infinite, topoDim 8s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+
+  .bg-app-saas-content {
+    position: relative;
+    z-index: 10;
+    background:
+      /* Dark gradient overlay for content legibility */
+      linear-gradient(
+        to bottom,
+        rgba(5, 5, 9, 0.3) 0%,
+        rgba(5, 5, 9, 0.5) 50%,
+        rgba(5, 5, 9, 0.3) 100%
+      );
+  }
+}
+
+/* Keyframe Animations */
+@keyframes topoDrift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(15px, -10px, 0);
+  }
+  50% {
+    transform: translate3d(-10px, 15px, 0);
+  }
+  75% {
+    transform: translate3d(10px, 10px, 0);
+  }
+}
+
+@keyframes topoDim {
+  0%, 100% {
+    opacity: 0.15;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.22;
+    filter: brightness(1.15);
+  }
 }
 
 /* Custom scrollbar */
