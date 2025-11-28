@@ -27,7 +27,7 @@ export function EnvironmentalAnalysis() {
   ];
 
   return (
-    <section ref={ref} className="section-padding bg-gradient-to-b from-transparent to-purple-900/10">
+    <section ref={ref} className="section-padding">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

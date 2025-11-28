@@ -58,7 +58,7 @@ export function Pricing() {
   ];
 
   return (
-    <section ref={ref} id="pricing" className="section-padding bg-gradient-to-b from-blue-900/10 to-transparent">
+    <section ref={ref} id="pricing" className="section-padding">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

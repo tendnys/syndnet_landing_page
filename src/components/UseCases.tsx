@@ -60,7 +60,7 @@ const useCases = [
 
 export function UseCases() {
   return (
-    <section id="use-cases" className="bg-[#0A0F1E]">
+    <section id="use-cases">
       {/* Header Section */}
       <div className="pt-32 pb-16 sm:pt-40 sm:pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">

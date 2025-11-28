@@ -23,23 +23,104 @@ function App() {
       <main>
         <Hero />
 
-        {/* Everything below hero uses the animated SaaS background */}
-        <section className="bg-app-saas">
-          <div className="bg-app-saas-content">
+        {/* Unified dark topo background for all sections after hero */}
+        <section className="bg-app-saas-global">
+          {/* Testimonial Section */}
+          <div className="bg-app-saas-section">
             <TestimonialQuote />
+          </div>
+
+          {/* Gradient transition */}
+          <div className="section-divider-gradient" />
+
+          {/* Natural Language Property Search */}
+          <div className="bg-app-saas-section">
             <AISearchShowcase />
+          </div>
+
+          {/* Subtle fade transition */}
+          <div className="section-divider-fade" />
+
+          {/* Unified Property Intelligence */}
+          <div className="bg-app-saas-section">
             <GISMapping />
+          </div>
+
+          {/* Gradient transition */}
+          <div className="section-divider-gradient" />
+
+          {/* Automated Site Analysis */}
+          <div className="bg-app-saas-section">
             <EnvironmentalAnalysis />
+          </div>
+
+          {/* Subtle fade transition */}
+          <div className="section-divider-fade" />
+
+          {/* Benefits Grid */}
+          <div className="bg-app-saas-section">
             <BenefitsGrid />
+          </div>
+
+          {/* Gradient transition */}
+          <div className="section-divider-gradient" />
+
+          {/* Scout M1 */}
+          <div className="bg-app-saas-section">
             <ScoutM1 />
+          </div>
+
+          {/* Subtle fade transition */}
+          <div className="section-divider-fade" />
+
+          {/* Features List */}
+          <div className="bg-app-saas-section">
             <FeaturesList />
+          </div>
+
+          {/* Gradient transition */}
+          <div className="section-divider-gradient" />
+
+          {/* Process Workflow */}
+          <div className="bg-app-saas-section">
             <ProcessWorkflow />
+          </div>
+
+          {/* Subtle fade transition */}
+          <div className="section-divider-fade" />
+
+          {/* Use Cases */}
+          <div className="bg-app-saas-section">
             <UseCases />
+          </div>
+
+          {/* Gradient transition */}
+          <div className="section-divider-gradient" />
+
+          {/* Pricing */}
+          <div className="bg-app-saas-section">
             <Pricing />
+          </div>
+
+          {/* Subtle fade transition */}
+          <div className="section-divider-fade" />
+
+          {/* FAQ */}
+          <div className="bg-app-saas-section">
             <FAQ />
+          </div>
+
+          {/* Gradient transition */}
+          <div className="section-divider-gradient" />
+
+          {/* CTA Section */}
+          <div className="bg-app-saas-section">
             <CTASection />
           </div>
         </section>
+
+        {/* Smooth transition into footer */}
+        <div className="h-12 bg-gradient-to-b from-black/0 to-black" />
       </main>
       <Footer />
     </div>

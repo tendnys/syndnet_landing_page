@@ -28,7 +28,7 @@ export function AISearchShowcase() {
   ];
 
   return (
-    <section ref={ref} className="section-padding bg-gradient-to-b from-transparent to-blue-900/10">
+    <section ref={ref} className="section-padding">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div

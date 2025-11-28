@@ -42,7 +42,63 @@
     @apply py-20 lg:py-32 px-6 lg:px-8;
   }
 
-  /* Animated SaaS Background - Topo Map */
+  /* Unified Global SaaS Background - Full Topo Theme */
+  .bg-app-saas-global {
+    position: relative;
+    background-color: #050509;
+    background-image:
+      radial-gradient(circle at top, rgba(129, 140, 248, 0.18), transparent 55%),
+      url("/images/topo-lines.png"),
+      url("/images/grid-pattern.png");
+    background-repeat:
+      no-repeat,
+      repeat,
+      repeat;
+    background-size:
+      1400px 800px,
+      900px 900px,
+      900px 900px;
+    background-position:
+      center top,
+      center,
+      center;
+    background-blend-mode:
+      normal,
+      soft-light,
+      soft-light;
+  }
+
+  .bg-app-saas-global::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.78),
+      rgba(0, 0, 0, 0.95)
+    );
+    z-index: 0;
+  }
+
+  .bg-app-saas-section {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Section Transition Helpers */
+  .section-divider-gradient {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-slate-600/40 to-transparent;
+  }
+
+  .section-divider-fade {
+    @apply h-16 bg-gradient-to-b from-slate-900/0 to-slate-900/20;
+  }
+
+  .clip-diagonal {
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+  }
+
+  /* Legacy - keeping for backwards compatibility if needed */
   .bg-app-saas {
     position: relative;
     background-color: #050509;
