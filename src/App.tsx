@@ -22,18 +22,24 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <TestimonialQuote />
-        <AISearchShowcase />
-        <GISMapping />
-        <EnvironmentalAnalysis />
-        <BenefitsGrid />
-        <ScoutM1 />
-        <FeaturesList />
-        <ProcessWorkflow />
-        <UseCases />
-        <Pricing />
-        <FAQ />
-        <CTASection />
+
+        {/* Everything below hero uses the animated SaaS background */}
+        <section className="bg-app-saas">
+          <div className="bg-app-saas-content">
+            <TestimonialQuote />
+            <AISearchShowcase />
+            <GISMapping />
+            <EnvironmentalAnalysis />
+            <BenefitsGrid />
+            <ScoutM1 />
+            <FeaturesList />
+            <ProcessWorkflow />
+            <UseCases />
+            <Pricing />
+            <FAQ />
+            <CTASection />
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
