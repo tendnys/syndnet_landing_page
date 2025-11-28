@@ -20,15 +20,15 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <UseCases />
+        <TestimonialQuote />
         <AISearchShowcase />
         <GISMapping />
         <EnvironmentalAnalysis />
-        <TestimonialQuote />
         <BenefitsGrid />
         <ScoutM1 />
         <FeaturesList />
         <ProcessWorkflow />
+        <UseCases />
         <Pricing />
         <FAQ />
         <CTASection />
