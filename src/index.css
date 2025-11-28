@@ -45,27 +45,7 @@
   /* Unified Global SaaS Background - Full Topo Theme */
   .bg-app-saas-global {
     position: relative;
-    background-color: #050509;
-    background-image:
-      radial-gradient(circle at top, rgba(129, 140, 248, 0.18), transparent 55%),
-      url("/images/topo-lines.png"),
-      url("/images/grid-pattern.png");
-    background-repeat:
-      no-repeat,
-      repeat,
-      repeat;
-    background-size:
-      1400px 800px,
-      900px 900px,
-      900px 900px;
-    background-position:
-      center top,
-      center,
-      center;
-    background-blend-mode:
-      normal,
-      soft-light,
-      soft-light;
+    background-color: #050509 !important;
   }
 
   .bg-app-saas-global::before {
@@ -73,11 +53,33 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background-image: linear-gradient(
-      rgba(0, 0, 0, 0.78),
-      rgba(0, 0, 0, 0.95)
-    );
     z-index: 0;
+    /* Layer backgrounds: gradient glow on top, then topo patterns, then dark overlay base */
+    background-image:
+      radial-gradient(circle at top, rgba(129, 140, 248, 0.18), transparent 55%),
+      url("/images/topo-lines.png"),
+      url("/images/grid-pattern.png"),
+      linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)) !important;
+    background-repeat:
+      no-repeat,
+      repeat,
+      repeat,
+      no-repeat;
+    background-size:
+      1400px 800px,
+      900px 900px,
+      900px 900px,
+      100% 100%;
+    background-position:
+      center top,
+      center,
+      center,
+      center;
+    background-blend-mode:
+      normal,
+      overlay,
+      overlay,
+      normal;
   }
 
   .bg-app-saas-section {
