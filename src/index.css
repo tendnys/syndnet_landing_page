@@ -42,46 +42,6 @@
     @apply py-20 lg:py-32 px-6 lg:px-8;
   }
 
-  /* Unified Global SaaS Background - Full Topo Theme */
-  .bg-app-saas-global {
-    position: relative;
-    background-color: #050509 !important;
-  }
-
-  .bg-app-saas-global::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    /* Layer backgrounds: gradient glow on top, then topo patterns, then dark overlay base */
-    background-image:
-      radial-gradient(circle at top, rgba(129, 140, 248, 0.18), transparent 55%),
-      url("/images/topo-lines.png"),
-      url("/images/grid-pattern.png"),
-      linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)) !important;
-    background-repeat:
-      no-repeat,
-      repeat,
-      repeat,
-      no-repeat;
-    background-size:
-      1400px 800px,
-      900px 900px,
-      900px 900px,
-      100% 100%;
-    background-position:
-      center top,
-      center,
-      center,
-      center;
-    background-blend-mode:
-      normal,
-      overlay,
-      overlay,
-      normal;
-  }
-
   .bg-app-saas-section {
     position: relative;
     z-index: 1;
@@ -110,59 +70,15 @@
     clip-path: polygon(0 0, 100% 100%, 0 100%);
   }
 
-  /* Legacy - keeping for backwards compatibility if needed */
-  .bg-app-saas {
-    position: relative;
-    background-color: #050509;
-    overflow: hidden;
-  }
-
-  .bg-app-saas::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      /* Top radial glow */
-      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(129, 140, 248, 0.18), transparent 70%),
-      /* Base dark color */
-      #050509;
-    z-index: 1;
-  }
-
-  .bg-app-saas::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('/images/topo-lines.png');
-    background-size: 600px 600px;
-    background-repeat: repeat;
-    opacity: 0.15;
-    z-index: 2;
-    animation: topoDrift 40s ease-in-out infinite, topoDim 8s ease-in-out infinite;
-    will-change: transform, opacity;
-  }
-
-  .bg-app-saas-content {
-    position: relative;
-    z-index: 10;
-    background:
-      /* Dark gradient overlay for content legibility */
-      linear-gradient(
-        to bottom,
-        rgba(5, 5, 9, 0.3) 0%,
-        rgba(5, 5, 9, 0.5) 50%,
-        rgba(5, 5, 9, 0.3) 100%
-      );
-  }
-
-  /* City Activity Map Background */
-  .bg-city-activity {
+  /* City Activity Map - Primary Background for All Sections */
+  .bg-city-primary {
     position: relative;
     isolation: isolate;
+    background-color: #020617;
     overflow: hidden;
   }
 
-  .bg-city-activity::before {
+  .bg-city-primary::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -170,35 +86,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.2; /* 20% opacity */
+    opacity: 0.2;
     z-index: -1;
-  }
-}
-
-/* Keyframe Animations */
-@keyframes topoDrift {
-  0%, 100% {
-    transform: translate3d(0, 0, 0);
-  }
-  25% {
-    transform: translate3d(15px, -10px, 0);
-  }
-  50% {
-    transform: translate3d(-10px, 15px, 0);
-  }
-  75% {
-    transform: translate3d(10px, 10px, 0);
-  }
-}
-
-@keyframes topoDim {
-  0%, 100% {
-    opacity: 0.15;
-    filter: brightness(1);
-  }
-  50% {
-    opacity: 0.22;
-    filter: brightness(1.15);
   }
 }
 

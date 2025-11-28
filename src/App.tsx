@@ -23,8 +23,8 @@ function App() {
       <main>
         <Hero />
 
-        {/* Unified dark topo background for all sections after hero */}
-        <section className="bg-app-saas-global bg-city-activity">
+        {/* City activity map background for all sections after hero */}
+        <section className="bg-city-primary">
           {/* Testimonial Section */}
           <div className="bg-app-saas-section">
             <TestimonialQuote />
