@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { TrendingUp } from 'lucide-react';
 
 // Placeholder market data items - can be replaced with API data later
@@ -29,11 +29,11 @@ export function MarketTicker() {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-transparent overflow-hidden">
-      <div className="h-9 sm:h-10 flex items-center">
+      <div className="h-9 sm:h-10 flex items-center bg-slate-950/80 backdrop-blur-sm">
         {/* Label */}
         <div className="hidden sm:flex items-center gap-2 px-4 lg:px-6 bg-transparent h-full flex-shrink-0 z-10">
           <TrendingUp className="w-3.5 h-3.5 text-[#1877F2]" />
-          <span className="text-xs font-semibold text-gray-400 tracking-wide uppercase">
+          <span className="text-[11px] font-semibold text-slate-400 tracking-[0.2em] uppercase">
             Market Feed
           </span>
         </div>
@@ -45,19 +45,20 @@ export function MarketTicker() {
           onMouseLeave={() => setIsPaused(false)}
         >
           <div
-            className={`flex whitespace-nowrap ${isPaused ? 'ticker-paused' : 'ticker-scroll'}`}
+            className={`flex items-center whitespace-nowrap ${isPaused ? 'ticker-paused' : 'ticker-scroll'}`}
             style={{
-              animationDuration: '60s', // 2x faster than before (was 120s)
+              animationDuration: '60s',
             }}
           >
             {items.map((item, index) => (
-              <div
-                key={index}
-                className="inline-flex items-center px-4 lg:px-6 text-xs sm:text-sm text-gray-300"
-              >
-                <span>{item}</span>
-                <span className="mx-4 lg:mx-6 text-gray-700">·</span>
-              </div>
+              <React.Fragment key={`${item}-${index}`}>
+                {index > 0 && (
+                  <span className="inline-block h-3 w-2 bg-slate-100/90 mx-4 lg:mx-6" />
+                )}
+                <span className="text-[11px] tracking-[0.2em] uppercase text-slate-100/80">
+                  {item}
+                </span>
+              </React.Fragment>
             ))}
           </div>
         </div>
@@ -65,7 +66,7 @@ export function MarketTicker() {
         {/* Dismiss Button (mobile) */}
         <button
           onClick={() => setIsDismissed(true)}
-          className="sm:hidden flex items-center justify-center w-9 h-9 text-gray-500 hover:text-gray-300 transition-colors flex-shrink-0"
+          className="sm:hidden flex items-center justify-center w-9 h-9 text-slate-500 hover:text-slate-300 transition-colors flex-shrink-0"
           aria-label="Dismiss ticker"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
