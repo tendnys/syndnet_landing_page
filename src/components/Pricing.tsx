@@ -1,0 +1,169 @@
+import { motion, useInView } from 'framer-motion';
+import { useRef, useState } from 'react';
+import { Check, Sparkles } from 'lucide-react';
+
+export function Pricing() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const [isAnnual, setIsAnnual] = useState(false);
+
+  const plans = [
+    {
+      name: 'Core',
+      price: isAnnual ? 119 : 149,
+      description: 'Perfect for getting started',
+      features: [
+        'Nationwide Property Search (Standard Data)',
+        'AI Search Queries - 1 Million Tokens/mo',
+        'Scout M1 + GIS Layers',
+        'AI Site Analysis (90 reports/month)',
+        '250 Monthly Skip Traces',
+        'Full CRM Pipeline & Deal Room Access'
+      ],
+      cta: 'Get Started',
+      popular: false
+    },
+    {
+      name: 'Elite',
+      price: isAnnual ? 239 : 299,
+      description: 'For power users and teams',
+      features: [
+        'Unlimited AI Search, Site Analysis & Due Diligence',
+        'All 4 Scout Modes',
+        'Unlimited GIS Layers',
+        'Unlimited Skip Traces',
+        'Advanced Intelligence features',
+        'Deal Rooms & Collaboration Tools',
+        'Priority Support'
+      ],
+      cta: 'Get Started',
+      popular: true
+    },
+    {
+      name: 'Listing',
+      price: 399,
+      priceLabel: 'per listing',
+      description: 'Promote your properties',
+      features: [
+        '1 Featured Listing (90 Days)',
+        'Top Placement Across Search',
+        'Direct Messaging With Verified Buyers',
+        'Premium Exposure features',
+        'Analytics Dashboard',
+        'Performance Tracking'
+      ],
+      cta: 'List Property',
+      popular: false
+    }
+  ];
+
+  return (
+    <section ref={ref} id="pricing" className="section-padding bg-gradient-to-b from-blue-900/10 to-transparent">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+            Flexible Plans for{' '}
+            <span className="gradient-text">Everyone</span>
+          </h2>
+          <p className="text-lg text-gray-400 mb-8">
+            Choose the perfect plan for your needs
+          </p>
+
+          {/* Toggle */}
+          <div className="inline-flex items-center gap-4 p-1 bg-gray-900/50 border border-gray-800 rounded-full">
+            <button
+              onClick={() => setIsAnnual(false)}
+              className={`px-6 py-2 rounded-full font-medium transition-all ${
+                !isAnnual
+                  ? 'bg-blue-600 text-white'
+                  : 'text-gray-400 hover:text-white'
+              }`}
+            >
+              Monthly
+            </button>
+            <button
+              onClick={() => setIsAnnual(true)}
+              className={`px-6 py-2 rounded-full font-medium transition-all ${
+                isAnnual
+                  ? 'bg-blue-600 text-white'
+                  : 'text-gray-400 hover:text-white'
+              }`}
+            >
+              Yearly <span className="text-xs text-green-400">Save 20%</span>
+            </button>
+          </div>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {plans.map((plan, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.2 + index * 0.1 }}
+              className={`relative p-8 rounded-2xl ${
+                plan.popular
+                  ? 'bg-gradient-to-b from-blue-600/20 to-purple-600/20 border-2 border-blue-500'
+                  : 'bg-gray-900/30 border border-gray-800'
+              }`}
+            >
+              {plan.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="flex items-center gap-1 px-4 py-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-xs font-semibold">
+                    <Sparkles className="w-3 h-3" />
+                    POPULAR
+                  </div>
+                </div>
+              )}
+
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                <p className="text-gray-400 text-sm">{plan.description}</p>
+              </div>
+
+              <div className="mb-6">
+                <div className="flex items-baseline">
+                  <span className="text-5xl font-bold text-white">${plan.price}</span>
+                  <span className="text-gray-400 ml-2">/{plan.priceLabel || (isAnnual ? 'year' : 'month')}</span>
+                </div>
+              </div>
+
+              <ul className="space-y-3 mb-8">
+                {plan.features.map((feature, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-300 text-sm">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href="#cta"
+                className={`block w-full py-3 text-center font-medium rounded-lg transition-all ${
+                  plan.popular
+                    ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                    : 'bg-gray-800 hover:bg-gray-700 text-white'
+                }`}
+              >
+                {plan.cta}
+              </a>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.6 }}
+          className="text-center text-gray-400 text-sm mt-8"
+        >
+          We donate 2% of your membership to pediatric wellbeing
+        </motion.p>
+      </div>
+    </section>
+  );
+}
