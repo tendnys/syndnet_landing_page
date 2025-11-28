@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[6.5rem] sm:pt-[7rem]">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent" />

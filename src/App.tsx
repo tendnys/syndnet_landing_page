@@ -1,3 +1,4 @@
+import { MarketTicker } from './components/MarketTicker';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { UseCases } from './components/UseCases';
@@ -17,6 +18,7 @@ import { Footer } from './components/Footer';
 function App() {
   return (
     <div className="min-h-screen bg-[#0A0F1E] overflow-x-hidden">
+      <MarketTicker />
       <Navbar />
       <main>
         <Hero />
