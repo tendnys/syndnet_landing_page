@@ -96,6 +96,16 @@
     @apply h-16 bg-gradient-to-b from-slate-900/0 to-slate-900/20;
   }
 
+  .bg-header-gradient {
+    background-image: linear-gradient(
+      to right,
+      #0ea5e9,
+      #3b82f6,
+      #6366f1,
+      #22c55e
+    );
+  }
+
   .clip-diagonal {
     clip-path: polygon(0 0, 100% 100%, 0 100%);
   }

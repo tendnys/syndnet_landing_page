@@ -25,7 +25,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-8">
             <a href="/" className="flex items-center">
-              <img src="/images/logo.svg" alt="Syndnet" className="h-10 w-auto" />
+              <img src="/images/White Txt Logo.png" alt="Syndnet" className="h-8 w-auto" />
             </a>
             <div className="hidden md:flex items-center space-x-6">
               <a href="#features" className="text-sm text-gray-300 hover:text-white transition-colors">
@@ -91,6 +91,9 @@ export function Navbar() {
           </div>
         </div>
       )}
+
+      {/* Blue gradient line at bottom of header */}
+      <div className="h-[2px] w-full bg-header-gradient" />
     </nav>
   );
 }

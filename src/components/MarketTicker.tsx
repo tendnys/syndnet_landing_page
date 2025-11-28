@@ -28,10 +28,10 @@ export function MarketTicker() {
   const items = [...marketTickerItems, ...marketTickerItems];
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-[#0D1321] border-b border-gray-800/50 overflow-hidden">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-transparent overflow-hidden">
       <div className="h-9 sm:h-10 flex items-center">
         {/* Label */}
-        <div className="hidden sm:flex items-center gap-2 px-4 lg:px-6 bg-[#0A0F1E] border-r border-gray-800/50 h-full flex-shrink-0 z-10">
+        <div className="hidden sm:flex items-center gap-2 px-4 lg:px-6 bg-transparent h-full flex-shrink-0 z-10">
           <TrendingUp className="w-3.5 h-3.5 text-[#1877F2]" />
           <span className="text-xs font-semibold text-gray-400 tracking-wide uppercase">
             Market Feed
@@ -47,7 +47,7 @@ export function MarketTicker() {
           <div
             className={`flex whitespace-nowrap ${isPaused ? 'ticker-paused' : 'ticker-scroll'}`}
             style={{
-              animationDuration: '120s', // Adjust speed here: higher = slower
+              animationDuration: '60s', // 2x faster than before (was 120s)
             }}
           >
             {items.map((item, index) => (
