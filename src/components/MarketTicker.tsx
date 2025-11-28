@@ -28,8 +28,8 @@ export function MarketTicker() {
   const items = [...marketTickerItems, ...marketTickerItems];
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-transparent overflow-hidden">
-      <div className="h-9 sm:h-10 flex items-center bg-slate-950/80 backdrop-blur-sm">
+    <div className="w-full bg-slate-950/95 backdrop-blur-sm overflow-hidden">
+      <div className="h-9 flex items-center">
         {/* Label */}
         <div className="hidden sm:flex items-center gap-2 px-4 lg:px-6 bg-transparent h-full flex-shrink-0 z-10">
           <TrendingUp className="w-3.5 h-3.5 text-[#1877F2]" />

@@ -14,7 +14,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full">
+    <header className="w-full">
       {/* Transparent navbar with optional backdrop blur on scroll */}
       <nav
         className={`transition-all duration-300 ${

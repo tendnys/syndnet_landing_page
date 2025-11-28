@@ -18,9 +18,14 @@ import { Footer } from './components/Footer';
 function App() {
   return (
     <div className="min-h-screen bg-[#0A0F1E] overflow-x-hidden">
-      <MarketTicker />
-      <Navbar />
-      <main>
+      {/* Fixed top stack: Ticker above Header */}
+      <div className="fixed inset-x-0 top-0 z-50">
+        <MarketTicker />
+        <Navbar />
+      </div>
+
+      {/* Main content with top padding to account for fixed ticker + header */}
+      <main className="pt-[88px]">
         <Hero />
 
         {/* City activity map background for all sections after hero */}
