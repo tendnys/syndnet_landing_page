@@ -154,6 +154,25 @@
         rgba(5, 5, 9, 0.3) 100%
       );
   }
+
+  /* City Activity Map Background */
+  .bg-city-activity {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .bg-city-activity::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/images/city-activity-map.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2; /* 20% opacity */
+    z-index: -1;
+  }
 }
 
 /* Keyframe Animations */
