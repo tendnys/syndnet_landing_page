@@ -29,7 +29,11 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold gradient-text mb-4">ScoutGPT</h3>
+            <img
+              src="/images/White Txt Logo.png"
+              alt="Syndnet"
+              className="h-8 object-contain mb-4"
+            />
             <p className="text-gray-400 mb-6 max-w-sm">
               The future of commercial real estate. Automate property analysis with AI-powered search and nationwide GIS data.
             </p>
@@ -111,7 +115,7 @@ export function Footer() {
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © {currentYear} ScoutGPT. All rights reserved.
+              © {currentYear} Syndnet. All rights reserved.
             </p>
             <p className="text-gray-500 text-xs text-center">
               Not a broker dealer. Information not investment advice. Coverage varies by market.
