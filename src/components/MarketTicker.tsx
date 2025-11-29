@@ -28,7 +28,7 @@ export function MarketTicker() {
   const items = [...marketTickerItems, ...marketTickerItems];
 
   return (
-    <div className="w-full bg-slate-950/95 backdrop-blur-sm overflow-hidden">
+    <div className="w-full bg-transparent overflow-hidden">
       <div className="h-9 flex items-center">
         {/* Label */}
         <div className="hidden sm:flex items-center gap-2 px-4 lg:px-6 bg-transparent h-full flex-shrink-0 z-10">

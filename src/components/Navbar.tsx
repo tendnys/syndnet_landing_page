@@ -15,14 +15,8 @@ export function Navbar() {
 
   return (
     <header className="w-full">
-      {/* Transparent navbar with optional backdrop blur on scroll */}
-      <nav
-        className={`transition-all duration-300 ${
-          isScrolled
-            ? 'backdrop-blur-sm bg-slate-900/40'
-            : 'bg-transparent'
-        }`}
-      >
+      {/* Transparent navbar */}
+      <nav className="bg-transparent transition-all duration-300">
         <div className="flex items-center justify-between px-6 py-4 lg:px-12">
           {/* Logo */}
           <div className="flex items-center">
