@@ -1,10 +1,59 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
+
+function TypewriterHeadline() {
+  const [displayedText, setDisplayedText] = useState('');
+  const [hasStartedTyping, setHasStartedTyping] = useState(false);
+  const fullText = 'The Future of Real Estate is ';
+  const highlightedWord = 'Conversational';
+
+  useEffect(() => {
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+      // Skip animation, show full text immediately
+      setDisplayedText(fullText);
+      setHasStartedTyping(true);
+      return;
+    }
+
+    // Show cursor alone for 2 seconds before starting to type
+    const initialDelay = setTimeout(() => {
+      setHasStartedTyping(true);
+
+      let currentIndex = 0;
+      const typingInterval = setInterval(() => {
+        if (currentIndex <= fullText.length) {
+          setDisplayedText(fullText.slice(0, currentIndex));
+          currentIndex++;
+        } else {
+          clearInterval(typingInterval);
+        }
+      }, 50); // Type speed: 50ms per character
+
+      return () => clearInterval(typingInterval);
+    }, 2000); // 2 second delay before typing starts
+
+    return () => clearTimeout(initialDelay);
+  }, []);
+
+  return (
+    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance">
+      {displayedText}
+      {hasStartedTyping && displayedText === fullText && (
+        <span className="gradient-text-blue">{highlightedWord}</span>
+      )}
+      <span className="cursor-blink ml-1">|</span>
+    </h1>
+  );
+}
 
 export function Hero() {
   return (
     <section
-      className="relative min-h-[75vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden pt-[6.5rem] sm:pt-[7rem] bg-cover bg-center bg-no-repeat"
+      className="relative h-screen flex items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)), url('/images/hero-bg-topo.jpg')"
       }}
@@ -26,15 +75,7 @@ export function Hero() {
             <span className="text-sm text-blue-400 font-medium">AUTOMATE SITE ANALYSIS FOR REAL ESTATE</span>
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance"
-          >
-            The Future of Real Estate is{' '}
-            <span className="gradient-text">Conversational</span>
-          </motion.h1>
+          <TypewriterHeadline />
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
