@@ -5,8 +5,9 @@ import { useState, useEffect } from 'react';
 function TypewriterHeadline() {
   const [displayedText, setDisplayedText] = useState('');
   const [hasStartedTyping, setHasStartedTyping] = useState(false);
-  const fullText = 'The Future of Real Estate is ';
+  const baseText = 'The Future of Real Estate is ';
   const highlightedWord = 'Conversational';
+  const fullText = baseText + highlightedWord;
 
   useEffect(() => {
     // Check for reduced motion preference
@@ -19,7 +20,7 @@ function TypewriterHeadline() {
       return;
     }
 
-    // Show cursor alone for 2 seconds before starting to type
+    // Show cursor alone for 0.75 seconds before starting to type
     const initialDelay = setTimeout(() => {
       setHasStartedTyping(true);
 
@@ -34,16 +35,21 @@ function TypewriterHeadline() {
       }, 50); // Type speed: 50ms per character
 
       return () => clearInterval(typingInterval);
-    }, 2000); // 2 second delay before typing starts
+    }, 750); // 0.75 second delay before typing starts
 
     return () => clearTimeout(initialDelay);
   }, []);
 
+  // Split the displayed text to apply gradient to "Conversational"
+  const shouldShowGradient = displayedText.length > baseText.length;
+  const basePartDisplayed = displayedText.slice(0, baseText.length);
+  const highlightPartDisplayed = displayedText.slice(baseText.length);
+
   return (
     <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance">
-      {displayedText}
-      {hasStartedTyping && displayedText === fullText && (
-        <span className="gradient-text-blue">{highlightedWord}</span>
+      {basePartDisplayed}
+      {shouldShowGradient && (
+        <span className="gradient-text-blue">{highlightPartDisplayed}</span>
       )}
       <span className="cursor-blink ml-1">|</span>
     </h1>
