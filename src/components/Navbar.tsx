@@ -7,14 +7,12 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Hero section is typically full viewport height (100vh)
-      // We'll fade the navbar background over the hero section
-      const heroHeight = window.innerHeight;
       const scrollPosition = window.scrollY;
 
-      // Calculate opacity: 1 at top, 0 at bottom of hero
-      // Fade starts immediately and completes by end of hero
-      const opacity = Math.max(0, 1 - (scrollPosition / heroHeight));
+      // Quick fade: transparent after scrolling just 100px
+      // 1 at top (0px), 0 after 100px
+      const fadeDistance = 100;
+      const opacity = Math.max(0, 1 - (scrollPosition / fadeDistance));
       setScrollOpacity(opacity);
     };
 

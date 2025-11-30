@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TrendingUp } from 'lucide-react';
 
 // Placeholder market data items - can be replaced with API data later
@@ -19,6 +19,23 @@ const marketTickerItems = [
 export function MarketTicker() {
   const [isDismissed, setIsDismissed] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
+  const [scrollOpacity, setScrollOpacity] = useState(1);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+
+      // Quick fade: transparent after scrolling just 100px
+      const fadeDistance = 100;
+      const opacity = Math.max(0, 1 - (scrollPosition / fadeDistance));
+      setScrollOpacity(opacity);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Call once on mount
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   if (isDismissed) {
     return null;
@@ -28,7 +45,12 @@ export function MarketTicker() {
   const items = [...marketTickerItems, ...marketTickerItems];
 
   return (
-    <div className="w-full bg-transparent overflow-hidden">
+    <div
+      className="w-full overflow-hidden backdrop-blur-lg border-b border-white/10 transition-all duration-300"
+      style={{
+        backgroundColor: `rgba(0, 0, 0, ${0.6 * scrollOpacity})`
+      }}
+    >
       <div className="h-9 flex items-center">
         {/* Label */}
         <div className="hidden sm:flex items-center gap-2 px-4 lg:px-6 bg-transparent h-full flex-shrink-0 z-10">

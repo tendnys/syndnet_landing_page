@@ -60,6 +60,8 @@ export function Hero() {
         backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)), url('/images/hero-bg-topo.jpg')"
       }}
     >
+      {/* Gradient fade at bottom for smooth transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-black/90 pointer-events-none z-10" />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
         <motion.div
@@ -116,7 +118,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
       >
         <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center p-2">
           <motion.div
