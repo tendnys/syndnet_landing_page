@@ -61,22 +61,8 @@ const useCases = [
 export function UseCases() {
   return (
     <section id="use-cases">
-      {/* Header Section */}
-      <div className="pt-32 pb-16 sm:pt-40 sm:pb-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Uncovers Opportunities Behind Every Parcel
-            </h2>
-            <p className="text-xl sm:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              How teams use ScoutGPT for parcel intelligence, deal flow, and spatial decision making.
-            </p>
-          </div>
-        </div>
-      </div>
-
       {/* Stacked Hero Bands - Desktop & Tablet */}
-      <div className="hidden lg:block pb-32">
+      <div className="hidden lg:block pt-32 pb-32">
         {useCases.map((useCase, index) => (
           <UseCaseBand
             key={index}
@@ -90,7 +76,7 @@ export function UseCases() {
       </div>
 
       {/* Mobile: Simple Stacked Layout */}
-      <div className="lg:hidden pb-24 space-y-20">
+      <div className="lg:hidden pt-24 pb-24 space-y-20">
         {useCases.map((useCase, index) => (
           <div key={index} className="px-6">
             {/* Screenshot on top - full width and large */}
