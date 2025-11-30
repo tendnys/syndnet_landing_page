@@ -1,6 +1,7 @@
 import { MarketTicker } from './components/MarketTicker';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { UseCases } from './components/UseCases';
 import { AISearchShowcase } from './components/AISearchShowcase';
 import { GISMapping } from './components/GISMapping';
 import { EnvironmentalAnalysis } from './components/EnvironmentalAnalysis';
@@ -94,6 +95,12 @@ function App() {
 
           {/* Subtle fade transition */}
           <div className="section-divider-fade" />
+
+          {/* Use Cases */}
+          <UseCases />
+
+          {/* Gradient transition */}
+          <div className="section-divider-gradient" />
 
           {/* Pricing */}
           <div className="bg-app-saas-section">
