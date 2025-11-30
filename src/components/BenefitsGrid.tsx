@@ -52,7 +52,7 @@ export function BenefitsGrid() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 + index * 0.1, duration: 0.6 }}
-              className="group p-8 bg-gray-900/50 border border-gray-800 rounded-2xl hover:border-gray-700 transition-all"
+              className="group p-8 bg-black/60 backdrop-blur-lg border border-white/10 rounded-2xl hover:border-white/20 hover:bg-black/70 transition-all"
             >
               <div className={`inline-flex p-4 bg-gradient-to-br ${benefit.gradient} rounded-xl mb-6 group-hover:scale-110 transition-transform`}>
                 <benefit.icon className="w-8 h-8 text-white" />

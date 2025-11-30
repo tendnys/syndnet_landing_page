@@ -20,12 +20,39 @@
   }
 
   body {
-    @apply bg-[#0A0F1E] text-gray-50 antialiased;
+    @apply text-gray-50 antialiased;
     font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+    background-color: #020617;
+  }
+
+  /* Fixed background with city activity map */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("/images/city-activity-map.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    z-index: -2;
+  }
+
+  /* Dark overlay on fixed background */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: -1;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold tracking-tight;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -59,6 +86,22 @@
   .bg-app-saas-section {
     position: relative;
     z-index: 1;
+    background: transparent;
+  }
+
+  /* Glassmorphism card utility */
+  .glass-card {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-card-strong {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   /* Section Transition Helpers */
@@ -88,45 +131,18 @@
   .bg-city-primary {
     position: relative;
     isolation: isolate;
-    background-color: #020617;
+    background: transparent;
     overflow: hidden;
-  }
-
-  .bg-city-primary::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: url("/images/city-activity-map.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    opacity: 0.12;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    z-index: -1;
   }
 }
 
 @layer components {
-  /* Founder Testimonial Section - White with Blueprint Map */
+  /* Founder Testimonial Section - Dark Theme */
   .founder-section {
     position: relative;
     isolation: isolate;
-    background-color: #ffffff;
-    color: #020617;
-  }
-
-  .founder-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url("/images/city-blue-prints-5808798.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.06;
-    mix-blend-mode: multiply;
-    z-index: -1;
+    background: transparent;
+    color: #F9FAFB;
   }
 
   /* Use Case Section - Urban Tech Background */

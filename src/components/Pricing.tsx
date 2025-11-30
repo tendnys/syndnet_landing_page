@@ -105,10 +105,10 @@ export function Pricing() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 + index * 0.1 }}
-              className={`relative p-8 rounded-2xl ${
+              className={`relative p-8 rounded-2xl backdrop-blur-lg ${
                 plan.popular
-                  ? 'bg-gradient-to-b from-blue-600/20 to-purple-600/20 border-2 border-blue-500'
-                  : 'bg-gray-900/30 border border-gray-800'
+                  ? 'bg-gradient-to-b from-blue-600/30 to-purple-600/30 border-2 border-blue-500'
+                  : 'bg-black/60 border border-white/10'
               }`}
             >
               {plan.popular && (

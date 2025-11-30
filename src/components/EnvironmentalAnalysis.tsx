@@ -62,7 +62,7 @@ export function EnvironmentalAnalysis() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="p-6 bg-gray-900/50 border border-gray-800 rounded-xl text-center"
+              className="p-6 bg-black/60 backdrop-blur-lg border border-white/10 rounded-xl text-center hover:bg-black/70 hover:border-white/20 transition-all"
             >
               <div className="inline-flex p-3 bg-purple-500/10 rounded-lg mb-4">
                 <feature.icon className="w-6 h-6 text-purple-400" />

@@ -17,7 +17,7 @@ import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#0A0F1E] overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden">
       {/* Fixed top stack: Ticker above Header */}
       <div className="fixed inset-x-0 top-0 z-50">
         <MarketTicker />

@@ -13,11 +13,11 @@ export function TestimonialQuote() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="relative p-12 bg-white/95 border border-gray-300 rounded-2xl shadow-xl"
+          className="relative p-12 bg-black/70 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl"
         >
-          <Quote className="absolute top-8 left-8 w-12 h-12 text-blue-500/15" />
+          <Quote className="absolute top-8 left-8 w-12 h-12 text-blue-400/20" />
           <blockquote className="relative z-10 text-center">
-            <p className="text-2xl md:text-3xl font-medium text-gray-900 mb-8 leading-relaxed">
+            <p className="text-2xl md:text-3xl font-medium text-gray-100 mb-8 leading-relaxed">
               "We're automating parcel analysis, zoning interpretation, GIS overlays, and ownership - while flagging debt maturities, distress, and highest-and-best-use potential..."
             </p>
             <footer className="flex flex-col items-center gap-4">
@@ -25,8 +25,8 @@ export function TestimonialQuote() {
                 F
               </div>
               <div>
-                <div className="font-semibold text-gray-900">Founder</div>
-                <div className="text-sm text-gray-600">CRE Investor</div>
+                <div className="font-semibold text-white">Founder</div>
+                <div className="text-sm text-gray-400">CRE Investor</div>
               </div>
             </footer>
           </blockquote>

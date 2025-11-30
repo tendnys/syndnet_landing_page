@@ -54,11 +54,11 @@ export function FAQ() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.1 + index * 0.05 }}
-              className="bg-gray-900/30 border border-gray-800 rounded-xl overflow-hidden"
+              className="bg-black/60 backdrop-blur-lg border border-white/10 rounded-xl overflow-hidden"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-900/50 transition-colors"
+                className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-black/70 transition-colors"
               >
                 <span className="text-lg font-semibold text-white pr-4">
                   {faq.question}

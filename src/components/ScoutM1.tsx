@@ -50,7 +50,7 @@ export function ScoutM1() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ delay: 0.4 + index * 0.1 }}
-                  className="p-4 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-blue-500/50 transition-colors group"
+                  className="p-4 bg-black/60 backdrop-blur-lg border border-white/10 rounded-xl hover:border-blue-500/50 transition-colors group"
                 >
                   <div className="flex items-start gap-3">
                     <div className="mt-1 w-2 h-2 bg-blue-500 rounded-full group-hover:scale-150 transition-transform" />

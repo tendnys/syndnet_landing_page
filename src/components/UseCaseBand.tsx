@@ -13,7 +13,7 @@ export function UseCaseBand({ headline, description, variant, index, ctaLabel }:
   const isScreenshotLeft = index % 2 === 0;
 
   return (
-    <div className="py-24 lg:py-40 bg-[#0A0F1E]">
+    <div className="py-24 lg:py-40">
       {/* Centered ~90vw container with max width */}
       <div className="w-[90vw] max-w-7xl mx-auto">
         {/* Flex layout: ~63% screenshot, ~37% text */}

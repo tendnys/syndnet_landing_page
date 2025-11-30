@@ -63,7 +63,7 @@ export function FeaturesList() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: index * 0.1 }}
-              className="p-6 bg-gray-900/30 border border-gray-800 rounded-xl hover:bg-gray-900/50 hover:border-gray-700 transition-all group"
+              className="p-6 bg-black/60 backdrop-blur-lg border border-white/10 rounded-xl hover:bg-black/70 hover:border-white/20 transition-all group"
             >
               <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500/20 transition-colors">
                 <feature.icon className="w-6 h-6 text-blue-400" />
