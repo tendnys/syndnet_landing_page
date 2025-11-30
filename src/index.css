@@ -94,7 +94,7 @@
 
   .bg-city-primary::before {
     content: "";
-    position: absolute;
+    position: fixed;
     inset: 0;
     background-image: url("/images/city-activity-map.jpg");
     background-size: cover;
