@@ -1,13 +1,38 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrollOpacity, setScrollOpacity] = useState(1);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Hero section is typically full viewport height (100vh)
+      // We'll fade the navbar background over the hero section
+      const heroHeight = window.innerHeight;
+      const scrollPosition = window.scrollY;
+
+      // Calculate opacity: 1 at top, 0 at bottom of hero
+      // Fade starts immediately and completes by end of hero
+      const opacity = Math.max(0, 1 - (scrollPosition / heroHeight));
+      setScrollOpacity(opacity);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Call once on mount
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <header className="w-full">
-      {/* Transparent navbar */}
-      <nav className="bg-transparent transition-all duration-300">
+      {/* Navbar with scroll-based fade effect */}
+      <nav
+        className="backdrop-blur-lg border-b border-white/10 transition-all duration-300"
+        style={{
+          backgroundColor: `rgba(0, 0, 0, ${0.6 * scrollOpacity})`
+        }}
+      >
         <div className="flex items-center justify-between px-6 py-4 lg:px-12">
           {/* Logo */}
           <div className="flex items-center">
@@ -75,7 +100,7 @@ export function Navbar() {
 
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-slate-900/95 backdrop-blur-xl border-t border-slate-800">
+          <div className="md:hidden bg-black/90 backdrop-blur-xl border-t border-white/10">
             <div className="px-6 py-4 space-y-3">
               <a
                 href="#features"
