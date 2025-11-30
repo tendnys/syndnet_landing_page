@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 
 function TypewriterHeadline() {
   const [displayedText, setDisplayedText] = useState('');
-  const [hasStartedTyping, setHasStartedTyping] = useState(false);
   const baseText = 'The Future of Real Estate is ';
   const highlightedWord = 'Conversational';
   const fullText = baseText + highlightedWord;
@@ -16,14 +15,11 @@ function TypewriterHeadline() {
     if (prefersReducedMotion) {
       // Skip animation, show full text immediately
       setDisplayedText(fullText);
-      setHasStartedTyping(true);
       return;
     }
 
     // Show cursor alone for 0.75 seconds before starting to type
     const initialDelay = setTimeout(() => {
-      setHasStartedTyping(true);
-
       let currentIndex = 0;
       const typingInterval = setInterval(() => {
         if (currentIndex <= fullText.length) {
