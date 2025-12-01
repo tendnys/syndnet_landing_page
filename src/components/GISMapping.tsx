@@ -1,6 +1,5 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { ScreenshotPlaceholder } from './ProductImage';
 import { Map, Layers, Globe, Zap } from 'lucide-react';
 
 export function GISMapping() {
@@ -67,7 +66,11 @@ export function GISMapping() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="order-1 lg:order-2"
           >
-            <ScreenshotPlaceholder title="GIS Zoning Layers" className="transform hover:scale-[1.02] transition-transform duration-500" />
+            <img
+              src="/images/gis-zoning-layers.png"
+              alt="GIS Zoning Layers - Interactive property mapping with color-coded zoning overlays"
+              className="w-full h-auto rounded-xl shadow-2xl transform hover:scale-[1.02] transition-transform duration-500"
+            />
           </motion.div>
         </div>
       </div>
