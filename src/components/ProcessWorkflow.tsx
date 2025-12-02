@@ -10,22 +10,22 @@ export function ProcessWorkflow() {
     {
       number: '01',
       icon: Search,
-      title: 'Discover & Analyze',
-      description: 'Start with a question or search criteria. Our AI instantly analyzes millions of properties to find perfect matches.',
+      title: 'Discover',
+      description: 'Browse off-market deals or explore properties directly on the map. Filter by fundamentals and set alerts for what fits your strategy.',
       color: 'from-blue-500 to-cyan-500'
     },
     {
       number: '02',
       icon: Compass,
-      title: 'Explore & Refine',
-      description: 'Review results on an interactive map. Access deep property intelligence, ownership data, and market insights.',
+      title: 'Evaluate',
+      description: 'Toggle zoning, flood, utilities, and environmental context. Understand the site before the underwriting begins.',
       color: 'from-cyan-500 to-purple-500'
     },
     {
       number: '03',
       icon: Rocket,
-      title: 'Act & Close',
-      description: 'Save leads, reach out to owners with skip tracing, and track opportunities through your entire pipeline.',
+      title: 'Act',
+      description: 'Save deals to your pipeline, manage conversations, and position yourself for ScoutGPT intelligence when it arrives.',
       color: 'from-purple-500 to-pink-500'
     }
   ];
@@ -39,11 +39,11 @@ export function ProcessWorkflow() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Uncovers Opportunities{' '}
-            <span className="gradient-text">Behind Every Parcel</span>
+            From discovery to close,{' '}
+            <span className="gradient-text">without friction.</span>
           </h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-            From discovery to deal close in three simple steps
+            Three steps from opportunity to action
           </p>
         </motion.div>
 

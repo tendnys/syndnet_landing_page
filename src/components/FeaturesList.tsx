@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { MapPin, Database, TrendingUp, Bell } from 'lucide-react';
+import { MapPin, Database, TrendingUp, Bell, Map, Layers, Workflow, MessageSquare, BarChart, FileText, Brain, Users, MessageCircle, Briefcase, Network } from 'lucide-react';
 
 export function FeaturesList() {
   const ref = useRef(null);
@@ -9,23 +9,93 @@ export function FeaturesList() {
   const features = [
     {
       icon: MapPin,
-      title: 'Off-market listings surfaced on the map',
-      description: 'Discover exclusive opportunities positioned exactly where they are, with full geographic context at a glance.'
+      title: 'Off-market marketplace',
+      description: 'Available Now',
+      badge: null
+    },
+    {
+      icon: Map,
+      title: 'Interactive geospatial interface',
+      description: 'Available Now',
+      badge: null
     },
     {
       icon: Database,
-      title: 'Filters for property type, price, and fundamentals',
-      description: 'Refine searches by asset class, pricing, key metrics, and investment criteria to surface the deals that matter most.'
+      title: 'Unified property context',
+      description: 'Available Now',
+      badge: null
+    },
+    {
+      icon: Workflow,
+      title: 'Pipeline CRM',
+      description: 'Available Now',
+      badge: null
     },
     {
       icon: Bell,
-      title: 'Buy Box alerts for matching opportunities',
-      description: 'Get notified instantly when properties matching your criteria become available, so you never miss a deal.'
+      title: 'Buy Box alerts',
+      description: 'Available Now',
+      badge: null
+    },
+    {
+      icon: Layers,
+      title: 'Parcel-level visibility',
+      description: 'Available Now',
+      badge: null
+    },
+    {
+      icon: MessageSquare,
+      title: 'Natural-language property search',
+      description: 'Coming Soon',
+      badge: 'AI'
+    },
+    {
+      icon: BarChart,
+      title: 'Motivation scoring',
+      description: 'Coming Soon',
+      badge: 'AI'
+    },
+    {
+      icon: FileText,
+      title: 'Automated zoning interpretation',
+      description: 'Coming Soon',
+      badge: 'AI'
     },
     {
       icon: TrendingUp,
-      title: 'Pipeline-ready deal cards',
-      description: 'Every listing becomes a structured opportunity card, ready to track, prioritize, and move through your workflow.'
+      title: 'Comparable sales analysis',
+      description: 'Coming Soon',
+      badge: 'AI'
+    },
+    {
+      icon: Brain,
+      title: 'AI-driven feasibility',
+      description: 'Coming Soon',
+      badge: 'AI'
+    },
+    {
+      icon: Users,
+      title: 'Groups',
+      description: 'Future',
+      badge: null
+    },
+    {
+      icon: MessageCircle,
+      title: 'Forums',
+      description: 'Future',
+      badge: null
+    },
+    {
+      icon: Briefcase,
+      title: 'Deal rooms',
+      description: 'Future',
+      badge: null
+    },
+    {
+      icon: Network,
+      title: 'Community-driven insights',
+      description: 'Future',
+      badge: null
     }
   ];
 

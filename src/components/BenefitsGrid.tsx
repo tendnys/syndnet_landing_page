@@ -9,20 +9,20 @@ export function BenefitsGrid() {
   const benefits = [
     {
       icon: Database,
-      title: 'Unified Property Intelligence',
-      description: '158+ million parcels with comprehensive data, zoning, utilities, and ownership information at your fingertips.',
+      title: 'Intelligence',
+      description: 'Property data, ownership details, and zoning overlays. Unified in a clean, map-first view.',
       gradient: 'from-blue-500 to-cyan-500'
     },
     {
       icon: Brain,
-      title: 'Location Analysis Built on AI',
-      description: 'AI surfaces qualified opportunities based on your criteria, analyzing millions of properties in seconds.',
+      title: 'Analysis',
+      description: 'Geospatial layers reveal conditions and constraints that shape every opportunity.',
       gradient: 'from-cyan-500 to-purple-500'
     },
     {
       icon: Workflow,
-      title: 'Integrated CRM',
-      description: 'Deal flow synced in one workspace. Track relationships, opportunities, and close deals faster.',
+      title: 'Pipeline',
+      description: 'Save deals, track progress, and manage conversations in one connected workspace.',
       gradient: 'from-purple-500 to-pink-500'
     }
   ];
