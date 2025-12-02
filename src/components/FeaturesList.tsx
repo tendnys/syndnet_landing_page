@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { MessageCircle, MapPin, Database, TrendingUp, UserSearch, Bell } from 'lucide-react';
+import { MapPin, Database, TrendingUp, Bell } from 'lucide-react';
 
 export function FeaturesList() {
   const ref = useRef(null);
