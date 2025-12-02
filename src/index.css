@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #3B82F6;
+  --color-secondary: #06B6D4;
+  --color-accent: #8B5CF6;
+  --bg-dark: #0A0F1E;
+  --bg-darker: #050A14;
+  --bg-card: #111827;
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-gray-50 antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+    background-color: #020617;
+  }
+
+  /* Fixed background with city activity map */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("/images/city-activity-map.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    z-index: -2;
+  }
+
+  /* Dark overlay on fixed background */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: -1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-blue {
+    @apply bg-gradient-to-r from-blue-400 via-sky-400 to-blue-500 bg-clip-text text-transparent;
+  }
+
+  /* Typewriter cursor animation */
+  @keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+  }
+
+  .cursor-blink {
+    animation: blink 1s infinite;
+  }
+
+  .section-padding {
+    @apply py-20 lg:py-32 px-6 lg:px-8;
+  }
+
+  .bg-app-saas-section {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+  }
+
+  /* Glassmorphism card utility */
+  .glass-card {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-card-strong {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Section Transition Helpers */
+  .section-divider-gradient {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-slate-600/40 to-transparent;
+  }
+
+  .section-divider-fade {
+    @apply h-16 bg-gradient-to-b from-slate-900/0 to-slate-900/20;
+  }
+
+  .bg-header-gradient {
+    background-image: linear-gradient(
+      to right,
+      #0ea5e9,
+      #3b82f6,
+      #6366f1,
+      #22c55e
+    );
+  }
+
+  .clip-diagonal {
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+  }
+
+  /* City Activity Map - Primary Background for All Sections */
+  .bg-city-primary {
+    position: relative;
+    isolation: isolate;
+    background: transparent;
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  /* Founder Testimonial Section - Dark Theme */
+  .founder-section {
+    position: relative;
+    isolation: isolate;
+    background: transparent;
+    color: #F9FAFB;
+  }
+
+  /* Use Case Section - Urban Tech Background */
+  .usecase-section {
+    position: relative;
+    isolation: isolate;
+    background-color: #020617;
+    overflow: hidden;
+  }
+
+  .usecase-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/images/Urban planning_tech.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.10;
+    z-index: -2;
+  }
+
+  .usecase-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(88, 28, 135, 0.35), transparent 55%);
+    opacity: 0.8;
+    z-index: -1;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-darker);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4B5563;
+}
