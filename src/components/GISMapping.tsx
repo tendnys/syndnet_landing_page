@@ -8,20 +8,20 @@ export function GISMapping() {
 
   const features = [
     {
-      icon: Layers,
-      text: 'Color-coded zoning overlays'
+      icon: Map,
+      text: 'Parcel-level visibility'
     },
     {
-      icon: Map,
-      text: 'Parcel boundary visualization'
+      icon: Layers,
+      text: 'Zoning and environmental overlays'
     },
     {
       icon: Globe,
-      text: 'Multi-layer GIS analysis'
+      text: 'Infrastructure and utility context'
     },
     {
       icon: Zap,
-      text: 'Real-time data across all 50 states'
+      text: 'Clear insight before underwriting begins'
     }
   ];
 
@@ -36,11 +36,11 @@ export function GISMapping() {
             className="order-2 lg:order-1"
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Unified Property{' '}
-              <span className="gradient-text">Intelligence</span>
+              Essential context,{' '}
+              <span className="gradient-text">unified in one view.</span>
             </h2>
             <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-              158+ million parcels with zoning, utilities, ownership, and GIS layer insights. Visualize properties instantly with interactive mapping.
+              Real estate data lives across county portals, PDFs, and scattered tools. Syndnet brings zoning, flood, utilities, and more into a single, streamlined map. Toggle the layers that matter and understand a site at a glance.
             </p>
             <div className="space-y-4">
               {features.map((feature, index) => (

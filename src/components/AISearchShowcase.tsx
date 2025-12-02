@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ScreenshotPlaceholder } from './ProductImage';
-import { MessageSquare, TrendingUp, Search, Database } from 'lucide-react';
+import { MessageSquare, TrendingUp, Database } from 'lucide-react';
 
 export function AISearchShowcase() {
   const ref = useRef(null);
@@ -10,20 +10,16 @@ export function AISearchShowcase() {
 
   const features = [
     {
-      icon: MessageSquare,
-      text: 'AI understands complex real estate queries'
+      icon: TrendingUp,
+      text: 'Six-stage pipeline'
     },
     {
-      icon: TrendingUp,
-      text: 'Instant property analysis and market insights'
+      icon: MessageSquare,
+      text: 'Notes and activity tracking'
     },
     {
       icon: Database,
-      text: 'Automated loan maturity tracking'
-    },
-    {
-      icon: Search,
-      text: 'Highest-and-best-use recommendations'
+      text: 'Deals tied to specific parcels'
     }
   ];
 
@@ -45,11 +41,11 @@ export function AISearchShowcase() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Natural Language{' '}
-              <span className="gradient-text">Property Search</span>
+              A pipeline built for{' '}
+              <span className="gradient-text">acquisitions.</span>
             </h2>
             <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-              Ask questions like you're talking to an expert. Find Multi-Family properties with maturing debt, identify distressed assets, or discover infill development opportunities—all through conversational AI.
+              Track opportunities from discovery to close. Save properties, add notes, manage stages, and keep your entire workflow organized. Designed specifically for commercial real estate. Not enterprise sales teams.
             </p>
             <div className="space-y-4">
               {features.map((feature, index) => (

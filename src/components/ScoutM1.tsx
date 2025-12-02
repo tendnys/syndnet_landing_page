@@ -8,13 +8,13 @@ export function ScoutM1() {
   const isInView = useInView(ref, { once: true });
 
   const queries = [
-    'Show me self-storage properties owned 5+ years',
-    'Find recent multifamily buyers in Dallas',
-    'Which properties have absentee owners?',
-    'List commercial land with highway access'
+    'Scout Search - Natural-language property discovery',
+    'Zoning Intelligence - Automated regulatory clarity',
+    'Comps Engine - Market alignment in seconds',
+    'Site Analysis - Fast, AI-driven feasibility'
   ];
 
-  const modes = ['M1', 'M2', 'M3', 'M4'];
+  const modes = ['Coming Soon'];
 
   return (
     <section ref={ref} className="section-padding">
@@ -26,14 +26,14 @@ export function ScoutM1() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-6">
             <Sparkles className="w-4 h-4 text-blue-400" />
-            <span className="text-sm text-blue-400 font-medium">SCOUT M1: THE DISCOVERY ENGINE</span>
+            <span className="text-sm text-blue-400 font-medium">SCOUTGPT</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            4 AI Search Modes,{' '}
-            <span className="gradient-text">Unlimited Possibilities</span>
+            The intelligence engine{' '}
+            <span className="gradient-text">powering Syndnet.</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Searches nationwide, understands complex criteria, and delivers comprehensive property data instantly.
+            ScoutGPT introduces natural-language search, motivation scoring, zoning interpretation, comps, and automated feasibility. It transforms Syndnet from a geospatial marketplace into an adaptive acquisition engine.
           </p>
         </motion.div>
 
