@@ -37,11 +37,11 @@ export function BenefitsGrid() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            A Full-Stack{' '}
-            <span className="gradient-text">Powerhouse</span>
+            Your map. Your market.{' '}
+            <span className="gradient-text">Your deal flow.</span>
           </h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-            Everything you need to discover, analyze, and close real estate deals in one platform
+            Everything begins on the map. Search markets, explore opportunities, evaluate sites, and keep your pipeline organized. Syndnet brings the essentials together so you can work with confidence and see every deal in context.
           </p>
         </motion.div>
 

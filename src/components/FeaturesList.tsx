@@ -8,34 +8,24 @@ export function FeaturesList() {
 
   const features = [
     {
-      icon: MessageCircle,
-      title: 'Natural Language Search',
-      description: 'Ask questions in plain English and get instant, accurate property results.'
-    },
-    {
       icon: MapPin,
-      title: 'Geospatial Interface',
-      description: 'Interactive maps with parcel-level data, zoning, and environmental overlays.'
+      title: 'Off-market listings surfaced on the map',
+      description: 'Discover exclusive opportunities positioned exactly where they are, with full geographic context at a glance.'
     },
     {
       icon: Database,
-      title: 'Multi-Source Data Synthesis',
-      description: 'Unified data from 158+ million parcels across all 50 states.'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Automated Market Research',
-      description: 'AI-powered insights on market trends, valuations, and opportunities.'
-    },
-    {
-      icon: UserSearch,
-      title: 'One-Click Skip Tracing',
-      description: 'Find contact information for property owners instantly.'
+      title: 'Filters for property type, price, and fundamentals',
+      description: 'Refine searches by asset class, pricing, key metrics, and investment criteria to surface the deals that matter most.'
     },
     {
       icon: Bell,
-      title: 'Buy-Box Alerts',
-      description: 'Get notified when properties matching your criteria become available.'
+      title: 'Buy Box alerts for matching opportunities',
+      description: 'Get notified instantly when properties matching your criteria become available, so you never miss a deal.'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Pipeline-ready deal cards',
+      description: 'Every listing becomes a structured opportunity card, ready to track, prioritize, and move through your workflow.'
     }
   ];
 
@@ -48,11 +38,11 @@ export function FeaturesList() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            All Features{' '}
-            <span className="gradient-text">In One Place</span>
+            The off-market marketplace{' '}
+            <span className="gradient-text">built on geospatial data.</span>
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Powerful tools designed for modern real estate professionals
+            CRE professionals nationwide share and discover opportunities on a platform where every listing lives exactly where it should. On the map. Filter by what matters, explore the surrounding context, and move the right deals into your pipeline with ease.
           </p>
         </motion.div>
 

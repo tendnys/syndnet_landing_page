@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react';
 
 function TypewriterHeadline() {
   const [displayedText, setDisplayedText] = useState('');
-  const baseText = 'The Future of Real Estate is ';
-  const highlightedWord = 'Conversational';
+  const baseText = 'Off-market discovery built on ';
+  const highlightedWord = 'geospatial data.';
   const fullText = baseText + highlightedWord;
 
   useEffect(() => {
@@ -87,7 +87,7 @@ export function Hero() {
             transition={{ delay: 0.4 }}
             className="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto text-balance"
           >
-            ScoutGPT combines nationwide property data, advanced GIS mapping, and AI-powered analytics—so you can find, evaluate and act faster than ever before.
+            Syndnet unifies deal flow, property insight, and pipeline management in one clean interface. A map-first workspace for CRE professionals who want clarity. ScoutGPT, the intelligence engine inside Syndnet, arrives soon.
           </motion.p>
 
           <motion.div
@@ -100,14 +100,14 @@ export function Hero() {
               href="#cta"
               className="group px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-all transform hover:scale-105 flex items-center gap-2"
             >
-              Get Started
+              Start Finding Deals
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#demo"
               className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white rounded-xl font-medium transition-all border border-white/10"
             >
-              Request Demo
+              See the Platform
             </a>
           </motion.div>
         </motion.div>
