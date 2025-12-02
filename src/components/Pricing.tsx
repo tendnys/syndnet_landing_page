@@ -9,48 +9,44 @@ export function Pricing() {
 
   const plans = [
     {
-      name: 'Core',
-      price: isAnnual ? 119 : 149,
-      description: 'Perfect for getting started',
+      name: 'Core - $50/month',
+      price: 50,
+      description: 'Perfect for getting started.',
       features: [
-        'Nationwide Property Search (Standard Data)',
-        'AI Search Queries - 1 Million Tokens/mo',
-        'Scout M1 + GIS Layers',
-        'AI Site Analysis (90 reports/month)',
-        '250 Monthly Skip Traces',
-        'Full CRM Pipeline & Deal Room Access'
+        'Off-market marketplace',
+        'Interactive property map',
+        'Unified GIS context',
+        'Buy Box alerts',
+        'Deal pipeline',
+        'Messaging'
       ],
-      cta: 'Get Started',
+      cta: 'Start Now',
       popular: false
     },
     {
-      name: 'Elite',
-      price: isAnnual ? 239 : 299,
-      description: 'For power users and teams',
+      name: 'Elite - Coming soon',
+      price: null,
+      description: 'For teams and power users.',
       features: [
-        'Unlimited AI Search, Site Analysis & Due Diligence',
-        'All 4 Scout Modes',
-        'Unlimited GIS Layers',
-        'Unlimited Skip Traces',
-        'Advanced Intelligence features',
-        'Deal Rooms & Collaboration Tools',
-        'Priority Support'
+        'Everything in Core',
+        'ScoutGPT intelligence',
+        'Automated analysis',
+        'Skip tracing',
+        'Priority access'
       ],
-      cta: 'Get Started',
+      cta: 'Join Waitlist',
       popular: true
     },
     {
-      name: 'Listing',
+      name: 'Listing Ad - $399',
       price: 399,
-      priceLabel: 'per listing',
-      description: 'Promote your properties',
+      priceLabel: '',
+      description: 'Promote your property.',
       features: [
-        '1 Featured Listing (90 Days)',
-        'Top Placement Across Search',
-        'Direct Messaging With Verified Buyers',
-        'Premium Exposure features',
-        'Analytics Dashboard',
-        'Performance Tracking'
+        '1 Featured Listing (90 days)',
+        'Top placement across search',
+        'Direct messaging',
+        'Listing analytics'
       ],
       cta: 'List Property',
       popular: false
@@ -127,8 +123,14 @@ export function Pricing() {
 
               <div className="mb-6">
                 <div className="flex items-baseline">
-                  <span className="text-5xl font-bold text-white">${plan.price}</span>
-                  <span className="text-gray-400 ml-2">/{plan.priceLabel || (isAnnual ? 'year' : 'month')}</span>
+                  {plan.price !== null ? (
+                    <>
+                      <span className="text-5xl font-bold text-white">${plan.price}</span>
+                      <span className="text-gray-400 ml-2">/{plan.priceLabel || (isAnnual ? 'year' : 'month')}</span>
+                    </>
+                  ) : (
+                    <span className="text-3xl font-bold text-gray-400">Pricing TBA</span>
+                  )}
                 </div>
               </div>
 

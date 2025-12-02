@@ -26,9 +26,7 @@ export function CTASection() {
               transition={{ delay: 0.2 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
             >
-              Ready to Automate Smarter?
-              <br />
-              Let's Build Together
+              Ready to move with clarity?
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -36,7 +34,7 @@ export function CTASection() {
               transition={{ delay: 0.3 }}
               className="text-xl text-white/90 mb-10 max-w-2xl mx-auto"
             >
-              Schedule a Call and Begin Automating
+              Join the professionals building better pipelines and discovering opportunities on the map.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -48,7 +46,7 @@ export function CTASection() {
                 href="#contact"
                 className="group px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold transition-all transform hover:scale-105 flex items-center gap-2"
               >
-                Get Started Now
+                Get Started
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
@@ -56,7 +54,7 @@ export function CTASection() {
                 className="flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-xl font-semibold border-2 border-white/20 hover:bg-white/20 transition-all"
               >
                 <Mail className="w-5 h-5" />
-                landio@support.com
+                Schedule a Demo
               </a>
             </motion.div>
           </div>

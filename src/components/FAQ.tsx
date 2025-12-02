@@ -39,12 +39,8 @@ export function FAQ() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Frequently Asked{' '}
-            <span className="gradient-text">Questions</span>
+            <span className="gradient-text">Everything you need to know.</span>
           </h2>
-          <p className="text-lg text-gray-400">
-            Everything you need to know about ScoutGPT
-          </p>
         </motion.div>
 
         <div className="space-y-4">

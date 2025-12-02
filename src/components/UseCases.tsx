@@ -3,55 +3,55 @@ import { UseCaseScreenshotCard } from './UseCaseScreenshotCard';
 
 const useCases = [
   {
-    headline: 'Comprehensive Parcel Intelligence',
+    headline: 'Comprehensive parcel insight',
     description: [
-      'Gain instant clarity across ownership, debt maturity, land use, and development potential.',
-      'Surface hidden off market opportunities faster than traditional tools.',
+      'Ownership, land use, zoning overlays, and site context.',
+      'Organized visually so you can understand any property at a glance.',
     ] as [string, string],
     variant: 1 as const,
     ctaLabel: 'Explore Parcel Intelligence',
   },
   {
-    headline: 'Automated Deal Pipeline',
+    headline: 'Deal pipeline',
     description: [
-      'Every submitted property becomes a structured opportunity with built in workflows.',
-      'Track, prioritize, and move deals through an automated CRM pipeline without manual entry.',
+      'Every property saved becomes a trackable opportunity.',
+      'Notes, stages, and context stay synced across your workflow.',
     ] as [string, string],
     variant: 2 as const,
     ctaLabel: 'View Deal Pipeline',
   },
   {
-    headline: 'Zoning Intelligence',
+    headline: 'Zoning clarity',
     description: [
-      'Understand allowable uses, density, constraints, and entitlement paths in seconds.',
-      'Interpret zoning overlays, height limits, setbacks, and environmental rules in one view.',
+      'Color-coded overlays show allowed uses and constraints.',
+      'A simple, visual way to navigate regulatory complexity.',
     ] as [string, string],
     variant: 3 as const,
     ctaLabel: 'Explore Zoning Intelligence',
   },
   {
-    headline: 'Suitability Analysis',
+    headline: 'Site suitability. Coming soon.',
     description: [
-      'Find the best locations for development, acquisitions, or asset repositioning.',
-      'Evaluate parcels based on infrastructure, demographics, utilities, and environmental fit.',
+      'Evaluate parcels by infrastructure, surrounding conditions, and environmental factors.',
+      'Automated feasibility reports arrive with ScoutGPT.',
     ] as [string, string],
     variant: 4 as const,
     ctaLabel: 'Run Suitability Analysis',
   },
   {
-    headline: 'Portfolio Risk Mapping',
+    headline: 'Portfolio view. Coming in Phase 3.',
     description: [
-      'Reveal exposure to wildfire, flood, environmental constraints, and regulatory buffers.',
-      'Map concentrations of risk instantly across any portfolio or target region.',
+      'Visualize exposure across markets.',
+      'Flood zones, fire risk, or regulatory overlays mapped across your portfolio.',
     ] as [string, string],
     variant: 5 as const,
     ctaLabel: 'Map Portfolio Risk',
   },
   {
-    headline: 'Recommendation Engine',
+    headline: 'Recommendation engine. Coming in Phase 2.',
     description: [
-      'Identify patterns, hotspots, and opportunity zones from parcel level data.',
-      'Highlight areas primed for development, redevelopment, or strategic investment.',
+      'Set your criteria once.',
+      'Syndnet surfaces opportunities that match, powered by ScoutGPT intelligence.',
     ] as [string, string],
     variant: 6 as const,
     ctaLabel: 'Discover Opportunities',

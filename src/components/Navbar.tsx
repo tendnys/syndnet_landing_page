@@ -49,19 +49,31 @@ export function Navbar() {
               href="#features"
               className="text-xs font-medium tracking-[0.18em] uppercase text-slate-100/80 hover:text-white transition-colors"
             >
-              Features
+              Platform
+            </a>
+            <a
+              href="#features"
+              className="text-xs font-medium tracking-[0.18em] uppercase text-slate-100/80 hover:text-white transition-colors"
+            >
+              Marketplace
+            </a>
+            <a
+              href="#features"
+              className="text-xs font-medium tracking-[0.18em] uppercase text-slate-100/80 hover:text-white transition-colors"
+            >
+              GIS
+            </a>
+            <a
+              href="#features"
+              className="text-xs font-medium tracking-[0.18em] uppercase text-slate-100/80 hover:text-white transition-colors"
+            >
+              AI
             </a>
             <a
               href="#pricing"
               className="text-xs font-medium tracking-[0.18em] uppercase text-slate-100/80 hover:text-white transition-colors"
             >
               Pricing
-            </a>
-            <a
-              href="#faq"
-              className="text-xs font-medium tracking-[0.18em] uppercase text-slate-100/80 hover:text-white transition-colors"
-            >
-              FAQ
             </a>
           </nav>
 
@@ -71,7 +83,7 @@ export function Navbar() {
               href="#contact"
               className="text-xs font-medium tracking-[0.18em] uppercase text-slate-100/80 hover:text-white transition-colors"
             >
-              Log in
+              Login
             </a>
             <a
               href="#cta"
@@ -104,7 +116,25 @@ export function Navbar() {
                 href="#features"
                 className="block text-xs font-medium tracking-[0.18em] uppercase text-slate-100/80 hover:text-white py-2"
               >
-                Features
+                Platform
+              </a>
+              <a
+                href="#features"
+                className="block text-xs font-medium tracking-[0.18em] uppercase text-slate-100/80 hover:text-white py-2"
+              >
+                Marketplace
+              </a>
+              <a
+                href="#features"
+                className="block text-xs font-medium tracking-[0.18em] uppercase text-slate-100/80 hover:text-white py-2"
+              >
+                GIS
+              </a>
+              <a
+                href="#features"
+                className="block text-xs font-medium tracking-[0.18em] uppercase text-slate-100/80 hover:text-white py-2"
+              >
+                AI
               </a>
               <a
                 href="#pricing"
@@ -113,16 +143,10 @@ export function Navbar() {
                 Pricing
               </a>
               <a
-                href="#faq"
-                className="block text-xs font-medium tracking-[0.18em] uppercase text-slate-100/80 hover:text-white py-2"
-              >
-                FAQ
-              </a>
-              <a
                 href="#contact"
                 className="block text-xs font-medium tracking-[0.18em] uppercase text-slate-100/80 hover:text-white py-2"
               >
-                Log in
+                Login
               </a>
               <a
                 href="#cta"
